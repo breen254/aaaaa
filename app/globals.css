@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 128, 0, 128;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgba: 128, 0, 128,
+  0.2;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background-start-rgb: 128, 0, 128;
     --background-end-rgb: 0, 0, 0;
   }
 }
@@ -21,7 +22,16 @@ body {
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--background-end-rgba))
     )
     rgb(var(--background-start-rgb));
-}
+    background-repeat: no-repeat;
+  
+  }
+
+  .icon-red {
+    fill: #ff0000; /* Your desired color */
+  }
+  
+
+  
