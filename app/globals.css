@@ -5,8 +5,7 @@
 :root {
   --foreground-rgb: 128, 0, 128;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgba: 128, 0, 128,
-  0.2;
+  --background-end-rgba: 128, 0, 128, 0.2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +16,13 @@
   }
 }
 
+html,
 body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0; /* Remove default margin */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -25,13 +30,12 @@ body {
       rgb(var(--background-end-rgba))
     )
     rgb(var(--background-start-rgb));
-    background-repeat: no-repeat;
-  
-  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Ensures the background covers the entire viewport */
+}
 
-  .icon-red {
-    fill: #ff0000; /* Your desired color */
-  }
-  
+
+
 
   

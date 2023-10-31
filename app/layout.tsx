@@ -21,12 +21,18 @@ export default function RootLayout({
     <html lang='en'>
     <body>
 
-      <Topbar />
+          <div className='fixed top-0 z-30 flex w-full h-[40px] items-center justify-between border px-6 py-3'>
+            <Topbar />
+          </div>
+
+
+
+
 
       <main className='flex flex-row'>
         <LeftSidebar />
-        <section className='flex flex-1 flex-col pb-5 mt-[55px] max-md:pb-32 sm:px-10 h-[0%] overflow-auto border'>
-          <div className='w-full max-w-4xl'>{children}</div>
+        <section className='flex flex-1 flex-col pb-5 max-md:pb-32 mt-[42px] ml-[13%] sm:px-10 h-[80%] overflow-auto border'>
+          <div className='w-full'>{children}</div>
         </section>
         {/* @ts-ignore */}
       </main>

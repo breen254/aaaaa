@@ -13,7 +13,7 @@ const LeftSidebar = () => {
   const pathname = usePathname();
 
   return (
-    <section className='sticky left-0 top-0 z-20 flex flex-col h-fit overflow-auto border rounded-2xl ml-2 pb-5 mt-[55px] max-md:hidden shadow-lg bg-slate-200 text-purple-500'>
+    <section className='fixed left-0 top-0 z-20 flex flex-col w-[12%] mt-[42px] h-[90%] overflow-auto border rounded-2xl ml-2 max-md:hidden shadow-lg bg-slate-200 text-purple-500'>
       <div className='flex w-full flex-1 flex-col gap-6 px-3'>
         {sidebarLinks.map((link) => {
           const isActive =
