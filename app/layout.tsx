@@ -25,14 +25,11 @@ export default function RootLayout({
             <Topbar />
           </div>
 
-
-
-
-
       <main className='flex flex-row'>
         <LeftSidebar />
-        <section className='flex flex-1 flex-col pb-5 max-md:pb-32 mt-[42px] ml-[13%] sm:px-10 h-[80%] overflow-auto border'>
-          <div className='w-full'>{children}</div>
+        <section className='fixed mt-[42px] ml-[13%] mr-10 w-full sm:px-10 h-[90%] overflow-auto'>
+
+          {children}
         </section>
         {/* @ts-ignore */}
       </main>
